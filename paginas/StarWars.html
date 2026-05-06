@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Wars</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styleStarWars.css" />
+</head>
+<body>
+
+  <nav class="nav-topo">
+    <a href="../index.html">← Voltar</a>
+    <span class="nav-separador">|</span>
+    <a href="../index.html#universos">Filmes</a>
+    <span class="nav-separador">></span>
+    <span class="nav-atual">StarWars</span>
+  </nav>
+
+  <main class="container-hero">
+    <div class="banner-hero">
+      <img src="../assets/fundos/star-wars-banner.jpg" alt="Star Wars Cinematic Background" />
+      <div class="sobreposicao-hero"></div>
+    </div>
+
+    <section class="conteudo-hero">
+      <div class="container-logo-filme">
+        <img src="../assets/logos/star-wars-logo.png" alt="Star Wars" class="logo-filme" />
+        <span class="subtitulo-filme">Episódio IV</span>
+        <span class="frase-filme">Uma Nova Esperança</span>
+      </div>
+
+      <div class="etiquetas-info">
+        <span class="etiqueta">1977</span>
+        <span class="etiqueta classificacao">12</span>
+        <span class="etiqueta">2h 1min</span>
+        <span class="etiqueta">Ação</span>
+        <span class="etiqueta">Aventura</span>
+        <span class="etiqueta">Ficção Científica</span>
+      </div>
+
+      <p class="texto-sinopse">
+        Luke Skywalker se une à Princesa Leia, Han Solo e Obi-Wan Kenobi para enfrentar o Império Galáctico e destruir a Estrela da Morte, uma arma capaz de destruir planetas.
+      </p>
+
+      <div class="container-botoes-acao">
+        <a href="https://www.youtube.com/watch?v=1g3_CFmnU7k" target="_blank" class="botao-trailer">
+          <svg viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          Assistir Trailer
+        </a>
+      </div>
+
+      <!-- Card de Avaliações -->
+      <div class="card-avaliacoes">
+        <div class="avaliacao-principal">
+          <span class="valor-nota">--</span>
+          <span class="rotulo-nota">IMDb Score</span>
+        </div>
+        
+        <div class="detalhes-avaliacao">
+          <div class="container-estrelas"></div>
+          <span class="contagem-votos">Carregando...</span>
+          <div class="barra-tecnologica">
+            <div class="preenchimento-barra"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- API -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const apiKey = "bbac1bf2";
+
+      fetch(`https://www.omdbapi.com/?t=Star+Wars&y=1977&apikey=${apiKey}`)
+        .then(res => res.json())
+        .then(data => {
+
+          console.log(data);
+
+          if (data.Response === "True") {
+
+            const nota = parseFloat(data.imdbRating);
+            document.querySelector(".valor-nota").textContent = nota;
+
+            document.querySelector(".contagem-votos").textContent =
+              `Baseado em ${data.imdbVotes} avaliações`;
+
+            const estrelas = Math.round(nota / 2);
+            const container = document.querySelector(".container-estrelas");
+            container.innerHTML = "";
+
+            for (let i = 1; i <= 5; i++) {
+              const estrela = document.createElement("span");
+              estrela.textContent = "★";
+              if (i > estrelas) estrela.style.opacity = "0.3";
+              container.appendChild(estrela);
+            }
+
+          } else {
+            document.querySelector(".valor-nota").textContent = "N/A";
+          }
+
+        })
+        .catch(() => {
+          document.querySelector(".valor-nota").textContent = "Erro";
+        });
+
+    });
+  </script>
+
+</body>
+</html>

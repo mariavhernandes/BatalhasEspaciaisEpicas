@@ -1,0 +1,416 @@
+:root {
+  --fundo-escuro:      #050a14;
+  --azul-principal:    #4f8ef7;
+  --azul-claro:        #7ab3ff;
+  --destaque-ouro:     #f5c518;
+  --texto-branco:      #ffffff;
+  --texto-suave:       #8ba3c7;
+  --fonte-titulo:      'Orbitron', sans-serif;
+  --fonte-corpo:       'Rajdhani', sans-serif;
+  --transicao:         0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --vidro-fundo:       rgba(255, 255, 255, 0.03);
+  --vidro-borda:       rgba(255, 255, 255, 0.08);
+}
+
+body {
+  background: var(--fundo-escuro);
+  color: var(--texto-branco);
+  font-family: var(--fonte-corpo);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Navegação */
+.nav-topo {
+  padding: 25px 60px;
+  display: flex;
+  align-items: center;
+  font-family: var(--fonte-corpo);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: linear-gradient(to bottom, rgba(5, 10, 20, 0.9) 0%, transparent 100%);
+}
+
+.nav-topo a {
+  color: var(--texto-branco);
+  text-decoration: none;
+  transition: var(--transicao);
+  opacity: 0.8;
+}
+
+.nav-topo a:hover {
+  opacity: 1;
+  color: var(--azul-principal);
+  text-shadow: 0 0 10px rgba(79, 142, 247, 0.5);
+}
+
+.nav-separador {
+  margin: 0 15px;
+  opacity: 0.3;
+}
+
+.nav-atual {
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+/* Container Principal */
+.container-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; 
+  display: flex;
+  align-items: center;
+  overflow: visible; 
+}
+
+/* Banner de Fundo */
+.banner-hero {
+  position: fixed; 
+  inset: 0;
+  z-index: 1;
+}
+
+.banner-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.sobreposicao-hero {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 25% 50%, transparent 0%, rgba(5, 10, 20, 0.4) 40%, rgba(5, 10, 20, 0.9) 80%, var(--fundo-escuro) 100%),
+  linear-gradient(to right, var(--fundo-escuro) 0%, rgba(5, 10, 20, 0.8) 35%, transparent 65%),
+  linear-gradient(to top, var(--fundo-escuro) 0%, transparent 25%);
+}
+
+/* Área de Conteúdo */
+.conteudo-hero {
+  position: relative;
+  z-index: 10;
+  padding: 60px 80px;
+  max-width: -750px;
+  margin-top: 20px;
+  animation: deslizarEsquerda 1.2s ease both;
+}
+
+.container-logo-filme {
+  margin-bottom: 30px;
+}
+
+.logo-filme {
+  max-width: 350px;
+  filter: drop-shadow(0 0 20px rgba(255,255,255,0.15));
+  display: block;
+}
+
+.subtitulo-filme {
+  font-family: "Times New Roman", serif;
+  font-size: 32px;
+  letter-spacing: 0.25em;
+  margin-top: -5px;
+  text-transform: uppercase;
+  color: #f8fafc;
+  display: block;
+  font-weight: 400;
+}
+
+.frase-filme {
+  font-family: var(--fonte-corpo);
+  font-size: 15px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  margin-top: 8px;
+  display: block;
+}
+
+/* Badges e Info */
+.etiquetas-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.etiqueta {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 5px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+}
+
+.etiqueta.classificacao {
+  background: var(--destaque-ouro);
+  color: #000;
+  border: none;
+}
+
+/* Sinopse */
+.texto-sinopse {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 40px;
+  max-width: 620px;
+  font-weight: 400;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Botão Assistir Trailer */
+.container-botoes-acao {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 35px;
+  animation: deslizarEsquerda 1.4s ease both;
+}
+
+.botao-trailer {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 28px;
+  border-radius: 50px;
+  color: var(--texto-branco);
+  text-decoration: none;
+  font-family: var(--fonte-titulo);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: var(--transicao);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.botao-trailer svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--azul-principal);
+  filter: drop-shadow(0 0 5px var(--azul-principal));
+  transition: var(--transicao);
+}
+
+.botao-trailer:hover {
+  background: rgba(79, 142, 247, 0.15);
+  border-color: var(--azul-principal);
+  box-shadow: 0 0 25px rgba(79, 142, 247, 0.3);
+  transform: translateY(-3px);
+}
+
+.botao-trailer:hover svg {
+  transform: scale(1.2);
+  fill: var(--azul-claro);
+}
+
+/* Card de Avaliações */
+.card-avaliacoes {
+  background: var(--vidro-fundo);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--vidro-borda);
+  border-radius: 16px;
+  padding: 24px 30px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  transition: var(--transicao);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-avaliacoes::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  transition: 0.5s;
+}
+
+.card-avaliacoes:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(79, 142, 247, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(79, 142, 247, 0.1);
+}
+
+.card-avaliacoes:hover::before {
+  left: 100%;
+}
+
+.avaliacao-principal {
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  padding-right: 30px;
+}
+
+.valor-nota {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--destaque-ouro);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.rotulo-nota {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--texto-suave);
+}
+
+.detalhes-avaliacao {
+  flex: 1;
+}
+
+.container-estrelas {
+  color: var(--destaque-ouro);
+  font-size: 18px;
+  margin-bottom: 8px;
+  display: flex;
+  gap: 4px;
+}
+
+.contagem-votos {
+  font-size: 14px;
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.barra-tecnologica {
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 2px;
+  position: relative;
+}
+
+.preenchimento-barra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 92%;
+  background: linear-gradient(90deg, var(--azul-principal), var(--azul-claro));
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--azul-principal);
+}
+
+/* Animações */
+@keyframes deslizarEsquerda {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsividade */
+@media (min-width: 1440px) {
+  .conteudo-hero {
+    max-width: 900px;
+    padding-left: 120px;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-topo {
+    padding: 20px 30px;
+    justify-content: center;
+  }
+  .conteudo-hero {
+    padding: 0 40px;
+    text-align: center;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+  }
+  .sobreposicao-hero {
+    background: linear-gradient(to top, var(--fundo-escuro) 20%, rgba(5, 10, 20, 0.7) 50%, rgba(5, 10, 20, 0.4) 100%);
+  }
+  .etiquetas-info {
+    justify-content: center;
+  }
+  .container-botoes-acao {
+    justify-content: center;
+  }
+  .card-avaliacoes {
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+  }
+  .avaliacao-principal {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-right: 0;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  .container-hero {
+    height: auto;          
+    min-height: 100vh;
+    overflow: visible;
+    padding-bottom: 50px;
+  }
+
+  .banner-hero {
+    position: fixed;
+  }
+  .nav-topo {
+    position: fixed; 
+    background: rgba(5, 10, 20, 0.95); 
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-topo {
+    font-size: 12px;
+    padding: 15px 20px;
+  }
+  .logo-filme {
+    max-width: 240px;
+  }
+  .subtitulo-filme {
+    font-size: 24px;
+  }
+  .frase-filme {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+  .texto-sinopse {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  .card-avaliacoes {
+    padding: 20px;
+    width: 90%;
+  }
+  .valor-nota {
+    font-size: 32px;
+  }
+}
