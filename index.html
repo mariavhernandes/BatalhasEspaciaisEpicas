@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+  <head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Batalhas Espaciais Épicas</title> <link rel="preconnect" href="https://fonts.googleapis.com" /> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> 
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" /> 
+    <link rel="stylesheet" href="css/style.css" /> 
+  </head> 
+  <body> 
+    <!-- estrelas no fundo --> 
+     <canvas id="canvas-estrelas"></canvas> 
+     <section class="secao-hero" id="hero"> 
+      <div class="hero-fundo"> 
+        <img src="assets/fundos/hero-bg.jpg" alt="Batalha Espacial" class="hero-imagem" /> 
+        <div class="hero-sobreposicao"></div> </div> <div class="hero-conteudo"> 
+          <p class="hero-etiqueta"> 
+            <img src="assets/icones/estrela_azul.png" style= "width:15px; height:17px" alt="estrela azul" /> O UNIVERSO É O CAMPO DE BATALHA </p> 
+            <h1 class="hero-titulo"> <span class="titulo-branco">BATALHAS</span> 
+              <span class="titulo-branco">ESPACIAIS</span> 
+              <span class="titulo-azul">ÉPICAS</span> 
+            </h1> 
+            <p class="hero-descricao"> De Star Trek a Star Wars, de Guardiões da Galáxia a Vingadores Ultimato.<br/> Explore as batalhas mais épicas do cinema. </p> 
+              <div class="hero-botoes"> <a href="#universos" class="botao botao-primario"> EXPLORAR BATALHAS 
+                <img src="assets/icones/seta.png" style= "width:20px; height:20px" alt="seta" /> 
+              </a> 
+            </div> 
+          </div> 
+        </section> 
+        <section class="secao-universos" id="universos"> 
+          <div class="cabecalho-secao"> 
+            <img src="assets/icones/estrela_amarela.png" style= "width:15px; height:17px" alt="estrela amarela" /> 
+            <span>UNIVERSOS EM DESTAQUE</span> 
+          </div> 
+          <div class="grade-cards"> 
+
+            <!-- Card 1: Star Trek --> 
+             <div class="card-filme" data-index="0" onclick="location.href='paginas/StarTrek.html'"> 
+              <div class="card-fundo"> 
+                <img src="assets/imagens/star trek.jpg" alt="Star Trek" /> 
+                <div class="card-sobreposicao"></div> 
+              </div> 
+              <div class="card-conteudo"> 
+                <h3 class="card-titulo">STAR TREK</h3> 
+                <p class="card-descricao">Explorar Frota Estelar</p> 
+                <a href="paginas/StarTrek.html" class="card-seta" aria-label="Ver mais"> 
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                  </svg> 
+                  </a> 
+                </div> 
+              </div> 
+
+              <!-- Card 2: Star Wars --> 
+               <div class="card-filme" data-index="1" onclick="location.href='paginas/StarWars.html'"> 
+                <div class="card-fundo"> 
+                  <img src="assets/imagens/star wars.jpg" alt="Star Wars" /> 
+                  <div class="card-sobreposicao"></div> 
+                </div> 
+                <div class="card-conteudo"> 
+                  <h3 class="card-titulo">STAR WARS</h3> 
+                  <p class="card-descricao">Que a Força esteja com você</p> 
+                  <a href="paginas/StarWars.html" class="card-seta" aria-label="Ver mais"> 
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="5" y1="12" x2="19" y2="12"/>
+                      <polyline points="12 5 19 12 12 19"/>
+                    </svg> 
+                  </a> 
+                </div> 
+              </div> 
+
+              <!-- Card 3: Guardiões da Galáxia --> 
+               <div class="card-filme" data-index="2" onclick="location.href='paginas/Guardioes.html'"> 
+                <div class="card-fundo"> 
+                  <img src="assets/imagens/guardioes.jpg" alt="Guardiões da Galáxia" /> 
+                  <div class="card-sobreposicao"></div> 
+                </div> <div class="card-conteudo"> 
+                  <h3 class="card-titulo">GUARDIÕES<br/>DA GALÁXIA</h3> 
+                  <p class="card-descricao">Sem regras. Só caos.</p> 
+                  <a href="paginas/Guardioes.html" class="card-seta" aria-label="Ver mais"> 
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="5" y1="12" x2="19" y2="12"/>
+                      <polyline points="12 5 19 12 12 19"/>
+                    </svg> 
+                  </a> 
+                </div> 
+              </div> 
+              
+              <!-- Card 4: Vingadores Ultimato --> 
+               <div class="card-filme" data-index="3" onclick="location.href='paginas/VingadoresUltimato.html'"> 
+                <div class="card-fundo"> 
+                  <img src="assets/imagens/vingadores ultimato.jpg" alt="Vingadores Ultimato" /> 
+                  <div class="card-sobreposicao"></div> 
+                </div> 
+                <div class="card-conteudo"> 
+                  <h3 class="card-titulo">VINGADORES ULTIMATO</h3> 
+                  <p class="card-descricao">O Bem contra o Mal</p> 
+                  <a href="paginas/VingadoresUltimato.html" class="card-seta" aria-label="Ver mais"> 
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="5" y1="12" x2="19" y2="12"/>
+                      <polyline points="12 5 19 12 12 19"/>
+                    </svg> 
+                  </a> 
+                </div> 
+              </div> 
+            </div> 
+          </section> 
+          <script src="js/script.js"></script> 
+        </body> 
+</html>
