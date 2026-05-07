@@ -1,4 +1,4 @@
-| [Português 🇧🇷](README-pt.md) | [English 🇺🇸](README.md) |
+| [Português 🇧🇷](README.md) | [English 🇺🇸](README-en.md) |
 |---|---|
 
 # Batalhas Espaciais Épicas - Universo Cinematográfico
@@ -32,5 +32,5 @@ Projeto desenvolvido em equipe composta por **5 pessoas**.
     * Design e estruturação colaborativa, onde cada integrante realizou o desenvolvimento completo de uma página do projeto.
 
 ## ⚠️ Desafios Enfrentados e Melhorias Futuras
-* **Desafios Técnicos:** Sincronizar o projeto e subir os arquivos corretamente no GitHub, além de implementar as funcionalidades específicas em JavaScript, como tratar os retornos da API assíncrona.
+* **Desafios Técnicos:** Sincronizar o projeto e subir os arquivos corretamente no GitHub, além de implementar as funcionalidades específicas em JavaScript, como tratar os retornos da API.
 * **Melhorias Futuras:** Com mais tempo, implementaríamos uma aba dedicada inteiramente a séries que possuem batalhas épicas, expandindo o catálogo além dos filmes.
