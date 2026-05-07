@@ -33,3 +33,7 @@ This project was developed by a team of **5 members**.
 ## ⚠️ Challenges & Future Improvements
 * **Technical Challenges:** Managing project versioning to push it to GitHub and handling specific JavaScript functionalities, such as managing asynchronous requests and dynamically injection elements into the DOM.
 * **Future Improvements:** Given more time, we would implement a dedicated section for TV Series that feature epic space battles, expanding beyond just feature films.
+
+## 🔗 Project Access
+You can view the live project through the link below:
+https://mariavhernandes.github.io/BatalhasEspaciaisEpicas/
