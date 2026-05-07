@@ -1,10 +1,6 @@
 | [Português 🇧🇷](README.md) | [English 🇺🇸](README-en.md) |
 |---|---|
 
-<p align="center">
-  <img width="400" height="auto" src="SUA_URL_DO_BANNER_AQUI" alt="Epic Space Battles Banner" />
-</p>
-
 # Epic Space Battles - Movie Universe
 
 ## 📌 Project Description
@@ -23,10 +19,11 @@
 * **JavaScript:** Logic for asynchronous requests (Fetch API), dynamic DOM manipulation, and visual stars calculation.
 * **OMDb API:** External REST API used to consume real-time movie statistics from IMDb.
 
-## 📸 System Screenshots
+## 📸 Prints do Sistema
 <p align="center">
-  <img width="300" height="auto" src="URL_TELA_LISTA" />
-  <img width="300" height="auto" src="URL_TELA_DETALHES" />
+  <img width="300" height="auto" src="https://github.com/user-attachments/assets/b6cf1ed5-3253-47c7-830e-8644aa912de8" />
+  <img width="300" height="auto" src="https://github.com/user-attachments/assets/f075b830-19d4-48f0-9d23-09b01b861cfe" />
+  <img width="300" height="auto" src="https://github.com/user-attachments/assets/d7f7871d-959e-40b0-ae32-a559f1672f78" />
 </p>
 
 ## 👥 Team Organization
