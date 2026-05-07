@@ -34,3 +34,7 @@ Projeto desenvolvido em equipe composta por **5 pessoas**.
 ## ⚠️ Desafios Enfrentados e Melhorias Futuras
 * **Desafios Técnicos:** Sincronizar o projeto e subir os arquivos corretamente no GitHub, além de implementar as funcionalidades específicas em JavaScript, como tratar os retornos da API.
 * **Melhorias Futuras:** Com mais tempo, implementaríamos uma aba dedicada inteiramente a séries que possuem batalhas épicas, expandindo o catálogo além dos filmes.
+
+## 🔗 Acesso ao Projeto
+Você pode visualizar o projeto em execução através do link abaixo:
+https://mariavhernandes.github.io/BatalhasEspaciaisEpicas/
